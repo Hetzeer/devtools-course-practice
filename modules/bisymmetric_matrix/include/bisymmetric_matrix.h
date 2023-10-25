@@ -22,7 +22,7 @@ class BisymmetricMatrix {
 
   BisymmetricMatrix& operator=(const BisymmetricMatrix& other);
   vector<double> operator[](int i) const { return container[i]; }
-  // vector<double>& operator[](int i) { return container[i]; }
+  vector<double>& operator[](int i) { return container[i]; }
 
   BisymmetricMatrix& operator+(const BisymmetricMatrix& other);
   BisymmetricMatrix& operator-(const BisymmetricMatrix& other);
@@ -30,7 +30,7 @@ class BisymmetricMatrix {
   BisymmetricMatrix& operator/(const BisymmetricMatrix& other);
 
   // void fillWithRand(int n);
-  void transpose(vector<vector<double>>* mat);
+  vector<vector<double>> transpose(const vector<vector<double>>& mat);
 
   int getSize() { return this->size; }
 };

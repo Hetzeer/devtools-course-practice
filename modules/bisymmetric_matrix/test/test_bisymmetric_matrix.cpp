@@ -30,9 +30,9 @@ TEST(BisymmetricMatrix_Test, Transpose) {
   int test_size = 2;
   std::vector<std::vector<double>> test_matrix = {{1, 2}, {3, 4}};
   BisymmetricMatrix a;
-  a.transpose(&test_matrix);
-  ASSERT_EQ(test_matrix[0][0], 1);
-  ASSERT_EQ(test_matrix[1][0], 2);
+  std::vector<std::vector<double>> b = a.transpose(test_matrix);
+  ASSERT_EQ(b[0][0], 1);
+  ASSERT_EQ(b[1][0], 2);
 }
 
 TEST(BisymmetricMatrix_Test, ParamConstructor2) {
@@ -46,8 +46,8 @@ TEST(BisymmetricMatrix_Test, ParamConstructor2) {
 }
 
 TEST(BisymmetricMatrix_Test, ParamConstructor_Not_Symmetric) {
-  const std::vector<std::vector<double>> test_matrix1 = { {1, 2}, {3, 4} };
-  ASSERT_ANY_THROW(BisymmetricMatrix(test_matrix1));
+  std::vector<std::vector<double>> test_matrix1 = {{1, 2}, {3, 4}};
+  ASSERT_ANY_THROW(new BisymmetricMatrix(test_matrix1));
 }
 
 TEST(BisymmetricMatrix_Test, CopyConstructor) {
