@@ -46,8 +46,8 @@ TEST(BisymmetricMatrix_Test, ParamConstructor2) {
 }
 
 TEST(BisymmetricMatrix_Test, ParamConstructor_Not_Symmetric) {
- const std::vector<std::vector<double>> test_matrix1 = { {1, 2}, {3, 4} };
- ASSERT_ANY_THROW(BisymmetricMatrix(test_matrix1));
+  const std::vector<std::vector<double>> test_matrix1 = { {1, 2}, {3, 4} };
+  ASSERT_ANY_THROW(BisymmetricMatrix(test_matrix1));
 }
 
 TEST(BisymmetricMatrix_Test, CopyConstructor) {
