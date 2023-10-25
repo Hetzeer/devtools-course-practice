@@ -22,7 +22,7 @@ set_tests_properties (${prefix}_get_help PROPERTIES
 
 add_test(
     NAME ${prefix}_get_help2
-    COMMAND ${APPLICATION} --help
+    COMMAND ${APPLICATION} --helpppp
 )
 set_tests_properties (${prefix}_get_help2 PROPERTIES
     PASS_REGULAR_EXPRESSION "success"
