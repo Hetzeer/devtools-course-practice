@@ -21,6 +21,14 @@ set_tests_properties (${prefix}_get_help PROPERTIES
     LABELS "${MODULE}")
 
 add_test(
+    NAME ${prefix}_get_help2
+    COMMAND ${APPLICATION} --help
+)
+set_tests_properties (${prefix}_get_help2 PROPERTIES
+    PASS_REGULAR_EXPRESSION "success"
+    LABELS "${MODULE}")
+
+add_test(
     NAME ${prefix}_test_plus
     COMMAND ${APPLICATION} 1 + 1
 )
