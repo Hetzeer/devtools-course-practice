@@ -77,7 +77,7 @@ TEST(BisymmetricMatrix_Test, Setter) {
   int test_size = 2;
   std::vector<std::vector<double>> test_matrix = {{1, 2}, {2, 1}};
   BisymmetricMatrix a(test_matrix);
-  a[0][0] = 10;
+  a[0] = {10, 2};
   ASSERT_EQ(a[0][0], 10);
 }
 
