@@ -56,9 +56,9 @@ BisymmetricMatrix& BisymmetricMatrix::operator=(
 
 BisymmetricMatrix& BisymmetricMatrix::operator+(
     const BisymmetricMatrix& other) {
-  if (this->size != other.size) {
-    throw -1;
-  }
+  // if (this->size != other.size) {
+  //   throw -1;
+  // }
 
   for (int i = 0; i < size; i++) {
     for (int j = i; j < size; j++) {
@@ -72,9 +72,9 @@ BisymmetricMatrix& BisymmetricMatrix::operator+(
 
 BisymmetricMatrix& BisymmetricMatrix::operator-(
     const BisymmetricMatrix& other) {
-  if (this->size != other.size) {
-    throw -1;
-  }
+  // if (this->size != other.size) {
+  //   throw -1;
+  // }
 
   for (int i = 0; i < size; i++) {
     for (int j = i; j < size; j++) {
@@ -88,9 +88,9 @@ BisymmetricMatrix& BisymmetricMatrix::operator-(
 
 BisymmetricMatrix& BisymmetricMatrix::operator*(
     const BisymmetricMatrix& other) {
-  if (this->size != other.size) {
-    throw -1;
-  }
+  // if (this->size != other.size) {
+  //   throw -1;
+  // }
 
   BisymmetricMatrix temp(size);
 
@@ -110,9 +110,9 @@ BisymmetricMatrix& BisymmetricMatrix::operator*(
 
 BisymmetricMatrix& BisymmetricMatrix::operator/(
     const BisymmetricMatrix& other) {
-  if (this->size != other.size) {
-    throw -1;
-  }
+  // if (this->size != other.size) {
+  //   throw -1;
+  // }
 
   BisymmetricMatrix temp(size);
 
@@ -130,19 +130,19 @@ BisymmetricMatrix& BisymmetricMatrix::operator/(
   return *this;
 }
 
-void BisymmetricMatrix::fillWithRand(int n) {
-  (*this) = BisymmetricMatrix(n);
+// void BisymmetricMatrix::fillWithRand(int n) {
+//   (*this) = BisymmetricMatrix(n);
 
-  std::random_device device;
-  std::mt19937 generator(device());
-  std::uniform_real_distribution<double> distribution(0, 100);
+//   std::random_device device;
+//   std::mt19937 generator(device());
+//   std::uniform_real_distribution<double> distribution(0, 100);
 
-  for (int i = 0; i < n; ++i)
-    for (int j = i; j < n; j++) {
-      container[i][j] = distribution(generator);
-      container[j][i] = container[i][j];
-    }
-}
+//   for (int i = 0; i < n; ++i)
+//     for (int j = i; j < n; j++) {
+//       container[i][j] = distribution(generator);
+//       container[j][i] = container[i][j];
+//     }
+// }
 
 void BisymmetricMatrix::transpose(vector<vector<double>>* mat) {
   vector<vector<double>> temp(*mat);
